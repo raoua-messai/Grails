@@ -1,0 +1,137 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+*{
+  margin: 0px;
+}
+
+header,footer {
+  background-color: #2196f3;
+  padding: 1%;
+  font-size: 20px;
+  color: white;
+}
+.item1 { grid-area: header; }
+.item2 { grid-area: main1;}
+.item2bis { grid-area: main1bis;}
+.item3 {  grid-area: cards;}
+.item4 { grid-area: footer; }
+.container {
+  min-height: 100vh; 
+display: grid;
+grid-template-rows: 60px 40px auto 60px ;
+grid-row-gap: 0px;
+grid-template-areas:
+"header header header header"
+"main1 main1 main1bis main1bis"
+"cards cards cards cards"
+"footer footer footer footer";
+}
+footer p{
+    line-height: 50px;
+}
+#sec1{
+  padding-top: 1%;
+ color:white;
+  background-color:#219bf8;
+  text-align: center;
+}
+#sec1bis{
+  color:white;
+  padding-top: 1%;
+  background-color: #2196f3;
+  text-align: center;
+
+}
+#cards{
+display: flex;
+padding-top: 1%;
+padding-bottom: 1%;
+background-color: #ebeced;
+flex-direction: column;
+}
+#img{
+  border-radius: 50%;
+  margin-bottom: 1%;
+}
+
+
+.image { 
+  grid-area: image;
+  }
+.title { 
+  grid-area: title;
+  padding-top: 1% ;
+}
+
+.hour { 
+  grid-area: hour;
+}
+.prix { 
+  padding-right: 2%;
+  font-size: 20px;
+  text-align: right;
+  grid-area: prix;
+
+}
+.bas { 
+  padding-bottom: 1% ;
+  grid-area: bas;
+  display: grid;
+  grid-template-areas:
+  "hour  prix ";
+  grid-template-columns: 50% auto  ;
+ 
+}
+
+.card { 
+background-color: white;
+  margin: 11px;
+}
+.photo{
+    height: 100%;
+    border-radius: 3px;
+  }
+.container2 {
+  background-color: white;
+  border-radius: 10px;
+display: grid;
+grid-template-columns: 25% auto auto ;
+grid-template-rows: 40px  30px 30px 32px 40px;
+grid-template-areas:
+"image  title title "
+"image  title title "
+"image  title title "
+"image  title title "
+"image  bas bas ";
+
+}
+
+
+@media only screen and (min-width:900px){
+    footer p{
+        line-height: 45px;
+    }
+ 
+    .container2 {
+        display: grid;
+        background-color: white;
+        border-radius: 10px;
+        grid-template-columns: 30% auto auto;
+        grid-template-rows: 50px 37px 30px 32px 40px;
+        grid-template-areas:
+            "image title title "
+            "image title title "
+            "image title title "
+            "image title title "
+            "image bas bas ";
+    }
+
+     #cards{
+      display: grid;
+      flex-direction: column;
+      grid-template-columns: 50% 50%;
+      grid-template-rows: 37% 45% ;
+  }
+
+}
